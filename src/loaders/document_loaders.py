@@ -2,12 +2,13 @@ import os
 import tempfile
 from typing import List, Union, Optional
 from enum import Enum
+import wikipedia
 
-from langchain.document_loaders import PyPDFLoader, WikipediaLoader
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_community.document_loaders import PyPDFLoader, WikipediaLoader
+from langchain.text_splitter import RecursiveCharacterTextSplitter 
 from langchain.schema import Document
 
-from config import GraphRAGConfig
+from src.config.config import GraphRAGConfig
 from logger import logger  # Custom logger module
 
 class SourceType(str, Enum):
