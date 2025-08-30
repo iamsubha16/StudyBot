@@ -2,6 +2,10 @@ import os
 from dataclasses import dataclass
 from typing import Optional
 from logger import logger  # Import the logger
+from dotenv import load_dotenv 
+
+# Load environment variables from .env file
+load_dotenv()
 
 @dataclass
 class GraphRAGConfig:

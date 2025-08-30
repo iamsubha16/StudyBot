@@ -46,9 +46,6 @@ class GraphManager:
     def create_knowledge_graph(self, document_chunks: List[Document]) -> None:
         """
         Create knowledge graph from document chunks
-        
-        Args:
-            document_chunks: List of document chunks to process
         """
         # Initialize the Graph Transformer with LLM
         llm_transformer = LLMGraphTransformer(llm=self.llm)
@@ -93,9 +90,6 @@ class GraphManager:
     def visualize_graph(self, cypher_query: str = None) -> str:
         """
         Get graph data for visualization
-        
-        Args:
-            cypher_query: Custom Cypher query for visualization
             
         Returns:
             Cypher query results as string
